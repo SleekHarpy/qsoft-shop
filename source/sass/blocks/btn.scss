@@ -1,0 +1,120 @@
+.btn {
+    display: block;
+
+    color: $color-white;
+    text-decoration: none;
+    font-weight: 500;
+    text-align: center;
+
+    background-color: $color-btn;
+    border-radius: 5px;
+
+    &:hover {
+        background-color: $color-hover;
+    }
+
+    &:active {
+        opacity: 0.5;
+    }
+
+    &--log-in {
+        padding: 9px 0;
+
+        width: 100px;
+    }
+
+    &--cart {
+        width: 50px;
+        height: 50px;
+
+        background-image: url("../img/icon-cart.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+
+        cursor: pointer;
+    }
+
+    &--more {
+        padding: 13px;
+        padding-left: 29px;
+        padding-right: 29px;
+
+        width: max-content;
+
+        color: $color-btn;
+        font-weight: 500;
+
+        background-color: transparent;
+        border: 1px solid $color-btn;
+    }
+
+    &--more:hover {
+        color: $color-hover;
+
+        background-color: transparent;
+        border: 1px solid $color-hover;
+    }
+
+    &--call {
+        position: relative;
+        margin-top: -10px;
+        padding: 14px 29px;
+        padding-left: 59px;
+
+        min-width: 199px;
+    }
+
+    &--call::before {
+        position: absolute;
+        top: 50%;
+        left: 30px;
+        transform: translateY(-50%);
+
+        display: block;
+        width: 18px;
+        height: 17px;
+
+        background-image: url("../img/icon-phone.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+
+        content: "";
+    }
+
+    &--disabled {
+        color: $color-placeholder;
+
+        background-color: $color-main-light;
+
+        cursor: default;
+    }
+
+    &--disabled:hover,
+    &--disabled:active {
+        color: $color-placeholder;
+
+        background-color: $color-main-light;
+
+        opacity: 1;
+    }
+}
+
+.btn__icon {
+    margin-left: 8px;
+    margin-bottom: -3px;
+
+    fill: $color-btn;
+}
+
+.btn--more:hover .btn__icon {
+    fill: $color-hover;
+}
+
+@media (max-width: $tablet-max-width) {
+    .btn {
+        &--call {
+            display: none;
+        }
+    }
+}

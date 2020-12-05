@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html class="page-html" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Qsoft Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="Интернет магазин Qsoft">
+    <link rel="prefetch" href="fonts/roboto-v20-cyrillic-regular.woff2" as="font" type="font/woff2">
+    <link rel="prefetch" href="fonts/roboto-v20-cyrillic-500.woff2" as="font" type="font/woff2">
+    <link rel="prefetch" href="fonts/roboto-v20-cyrillic-700.woff2" as="font" type="font/woff2">
+    <link href="./css/style.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+    <script src="https://unpkg.com/imask"></script>
+  </head>
+  <body>
+  
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+
+    <header class="header">
+      <div class="header__top">
+        <div class="header__top-inner">
+          <a class="header__logo">
+            <span class="visually-hidden">Логотип Qsoft</span>
+            <img
+              class="header__logo-img"
+              src="./img/logo-qsoft.svg"
+              alt="Логотип QSOFT"
+            />
+          </a>
+          <form class="header__search-form" action="#" method="GET">
+            <input
+              class="header__search-field"
+              type="search"
+              placeholder="Найти на сайте..."
+              aria-label="Строка поиска"
+            />
+            <svg class="header__search-form-icon" width="16" height="16">
+              <use xlink:href="#icon-search"></use>
+            </svg>
+          </form>
+          <div class="header__phone">
+            <a class="header__phone-number">8 (999) 666-00-13</a>
+            <p class="header__times"><span class="header__call">Звоните с 8 до 23!</span><span class="header__work">Работаем с 8 до 23!</span></p>
+          </div>
+          <div>
+            <a class="header__log-in header__log-in--desktop btn btn--log-in" href="#">Войти</a>
+            <a class="header__log-in header__log-in--mobile" href="#">
+              <span class="visually-hidden">Войти</span>
+            </a>
+          </div>
+          <button class="header__menu-switcher" type="button"><span class="visually-hidden">Открыть / Закрыть меню</span></button>
+          <div class="header__phone-callback callback">
+            <form action="#" method="POST">
+              <button class="callback__question" type="button">Вам перезвонить?</button>
+              <h3 class="callback__title">Заказать звонок</h3>
+              <p class="callback__item">
+                <label for="name">Ваше имя</label>
+                <input id="name" type="text" placeholder="Не обязательно">
+              </p>
+              <p class="callback__item">
+                <label for="phone-number">Ваш номер телефона</label>
+                <input type="text" id="phone-number" placeholder="+7 (999) 999-99-99" required>
+              </p>
+              <button class="callback__btn" type="submit">Перезвоните мне</button>
+              <p class="callback__private-info">Нажимаю кнопку «Перезвоните мне» вы даёте согласие на <a href="#" class="callback__link">обработку персональных данных</a></p>
+            </form>
+          </div>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link main-nav__link--action">Акции</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">Товары</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">Доставка и оплата</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">Гарантия</a>
+            <ul class="main-nav__submenu">
+              <li class="main-nav__submenu-item">
+                <a href="#" class="main-nav__link main-nav__link--submenu"
+                  >Пункт меню 1</a
+                >
+              </li>
+              <li class="main-nav__submenu-item">
+                <a href="#" class="main-nav__link main-nav__link--submenu"
+                  >Пункт меню 2</a
+                >
+              </li>
+              <li class="main-nav__submenu-item">
+                <a href="#" class="main-nav__link main-nav__link--submenu"
+                  >Пункт меню 3</a
+                >
+              </li>
+              <li class="main-nav__submenu-item">
+                <a href="#" class="main-nav__link main-nav__link--submenu"
+                  >Пункт меню 4</a
+                >
+              </li>
+              <li class="main-nav__submenu-item">
+                <a href="#" class="main-nav__link main-nav__link--submenu"
+                  >Пункт меню 5</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">О нас</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="popular-goods">
+        <h2 class="popular-goods__title title">Популярные товары</h2>
+        <ul class="cards-list">
+
+          <li class="cards-list__item card">
+            <div class="card__inner">
+              <ul class="card__tooltip">
+                <li class="card__tooltip-item card__tooltip-item--action">
+                  Акция
+                </li>
+                <li class="card__tooltip-item card__tooltip-item--hit">
+                  Хит
+                </li>
+                <li class="card__tooltip-item card__tooltip-item--best-price">
+                  Лучшая цена
+                </li>
+              </ul>
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./img/webp/img-product-1@1x.webp 1x,
+                    ./img/webp/img-product-1@2x.webp 2x
+                  "
+                />
+  
+                <!-- 1х: 270px; 2x: 540px -->
+                <img
+                  class="card__img"
+                  src="./img/img-product-1@1x.jpg"
+                  srcset="./img/img-product-1@2x.jpg 2x"
+                  alt="Изображение товара"
+                />
+              </picture>
+              <h3 class="card__title">
+                <a class="card__link" href="#">Цветок, который стоит на столе, такой загадочный.</a>
+              </h3>
+              <p class="card__description">
+                А тут описание цветка, придающее ему загадочности и вызывающее
+                интерес пользователя
+              </p>
+              <div class="card__bottom">
+                <p class="card__prices">
+                  <span class="card__old-price">1 499 &#x20BD;</span> <br />
+                  <span class="card__price">799 &#x20BD;</span>
+                </p>
+                <button class="card__btn btn btn--cart" type="button">
+                  <span class="visually-hidden">В корзину</span>
+                </button>
+              </div>
+            </div>
+          </li>
+
+          <li class="cards-list__item card">
+            <div class="card__inner">
+              <ul class="card__tooltip">
+                <li class="card__tooltip-item card__tooltip-item--action">
+                  Акция
+                </li>
+              </ul>
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./img/webp/img-product-2@1x.webp 1x,
+                    ./img/webp/img-product-2@2x.webp 2x
+                  "
+                />
+
+                <!-- 1х: 270px; 2x: 540px -->
+                <img
+                  class="card__img"
+                  src="./img/img-product-2@1x.jpg"
+                  srcset="./img/img-product-2@2x.jpg 2x"
+                  alt="Изображение товара"
+                />
+              </picture>
+              <h3 class="card__title">
+                <a href="#" class="card__link">Набор юного инстаблогера</a>
+              </h3>
+              <p class="card__description">
+                Посмотрите на него. <br>
+                Он покажет всем какой он классный и творческий. Главное не забыть посидеть на подоконнике с бокаль...
+              </p>
+              <div class="card__bottom">
+                <p class="card__prices">
+                  <span class="card__price">13 666 &#x20BD;</span>
+                </p>
+                <button class="card__btn btn btn--cart" type="button">
+                  <span class="visually-hidden">В корзину</span>
+                </button>
+              </div>
+            </div>
+          </li>
+
+          <li class="cards-list__item card">
+            <div class="card__inner">
+              <ul class="card__tooltip">
+                <li class="card__tooltip-item card__tooltip-item--hit">
+                  Хит
+                </li>
+              </ul>
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./img/webp/img-product-3@1x.webp 1x,
+                    ./img/webp/img-product-3@2x.webp 2x
+                  "
+                />
+  
+                <!-- 1х: 270px; 2x: 540px -->
+                <img
+                  class="card__img"
+                  src="./img/img-product-3@1x.jpg"
+                  srcset="./img/img-product-3@2x.jpg 2x"
+                  alt="Изображение товара"
+                />
+              </picture>
+              <h3 class="card__title">
+                <a href="#" class="card__link">Лампа. Просто лампа.</a>
+              </h3>
+              <p class="card__description">
+                В паре с загадочным цветком добавит загадочности вашему интерьеру
+              </p>
+              <div class="card__bottom">
+                <p class="card__prices">
+                  <span class="card__old-price">2 699 &#x20BD;</span> <br />
+                  <span class="card__price">1 789 &#x20BD;</span>
+                </p>
+                <button class="card__btn btn btn--cart" type="button">
+                  <span class="visually-hidden">В корзину</span>
+                </button>
+              </div>
+            </div>
+          </li>
+
+          <li class="cards-list__item card">
+            <div class="card__inner">
+              <ul class="card__tooltip">
+              <li class="card__tooltip-item card__tooltip-item--action">
+                Акция
+              </li>
+              <li class="card__tooltip-item card__tooltip-item--hit">
+                Хит
+              </li>
+            </ul>
+            <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  ./img/webp/img-product-4@1x.webp 1x,
+                  ./img/webp/img-product-4@2x.webp 2x
+                "
+              />
+
+              <!-- 1х: 270px; 2x: 540px -->
+              <img
+                class="card__img"
+                src="./img/img-product-4@1x.jpg"
+                srcset="./img/img-product-4@2x.jpg 2x"
+                alt="Изображение товара"
+              />
+            </picture>
+            <h3 class="card__title">
+              <a class="card__link" href="#">Классные деревенные минималистичные часы с...</a>
+            </h3>
+            <p class="card__description">
+              Все в ту же копилку загадочности вашего интерьера и вашей натуры
+            </p>
+            <div class="card__bottom">
+              <p class="card__prices">
+                <span class="card__old-price">2 199 &#x20BD;</span> <br />
+                <span class="card__price">1 899 &#x20BD;</span>
+              </p>
+              <button class="card__btn btn btn--cart" type="button">
+                <span class="visually-hidden">В корзину</span>
+              </button>
+            </div>
+            </div>
+          </li>
+
+        </ul>
+        <a class="popular-goods__btn btn btn--more" href="#">
+          Смотреть каталог
+          <svg class="btn__icon" width="16" height="14">
+            <use xlink:href="#icon-arrow-right"></use>
+          </svg>
+        </a>
+      </section>
+
+      <section class="news">
+        <div class="news__inner">
+          <h2 class="news__title title">Новости компании</h2>
+          <ul class="news-list">
+
+            <li class="news-list__item news-list__item--news-1">
+              <div class="news-list__item-inner">
+                <a href="#" class="news-list__link">
+                  <h3 class="news-list__title">
+                      Цветок, который стоит на столе, такой загадочный.
+                  </h3>
+                  <p class="news-list__description">
+                    А тут описание цветка, придающее ему загадочности и вызывающее
+                    интерес пользователя
+                  </p>
+                </a>
+              </div>
+            </li>
+
+            <li class="news-list__item news-list__item--news-2 news-list__item--big">
+                <div class="news-list__item-inner">
+                  <a href="#" class="news-list__link">
+                    <h3 class="news-list__title">
+                        Длинный заголовок большой новости
+                    </h3>
+                    <p class="news-list__description">
+                      А тут описание цветка, придающее ему загадочности и вызывающее
+                      интерес пользователя
+                    </p>
+                  </a>
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcset="
+                        ./img/webp/img-news-1@1x.webp 1x,
+                        ./img/webp/img-news-1@2x.webp 2x
+                      "
+                    />
+      
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img
+                      class="card__img"
+                      src="./img/img-news-1@1x.jpg"
+                      srcset="./img/img-news-1@2x.jpg 2x"
+                      alt="Изображение новости"
+                    />
+                  </picture>
+                </div>
+            </li>
+            <li class="news-list__item news-list__item--news-3 news-list__item--big">
+              <div class="news-list__item-inner">
+                <a href="#" class="news-list__link">
+                  <h3 class="news-list__title">
+                      Длинный заголовок большой новости
+                  </h3>
+                  <p class="news-list__description">
+                    А тут описание цветка, придающее ему загадочности и вызывающее
+                    интерес пользователя
+                  </p>
+                </a>
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./img/webp/img-news-2@1x.webp 1x,
+                      ./img/webp/img-news-2@2x.webp 2x
+                    "
+                  />
+    
+                  <!-- 1х: 270px; 2x: 540px -->
+                  <img
+                    class="card__img"
+                    src="./img/img-news-2@1x.jpg"
+                    srcset="./img/img-news-2@2x.jpg 2x"
+                    alt="Изображение новости"
+                  />
+                </picture>
+              </div>
+            </li>
+            <li class="news-list__item news-list__item--news-4">
+              <div class="news-list__item-inner">
+                <a href="#" class="news-list__link">
+                  <h3 class="news-list__title">
+                      Цветок, который стоит на столе, такой загадочный.
+                  </h3>
+                  <p class="news-list__description">
+                    А тут описание цветка, придающее ему загадочности и вызывающее
+                    интерес пользователя
+                  </p>
+                </a>
+              </div>
+            </li>
+          </ul>
+          <a class="news__btn btn btn--more" href="#">
+            Смотреть все новости
+            <svg class="btn__icon" width="16" height="14">
+              <use xlink:href="#icon-arrow-right"></use>
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <section class="partners">
+      <h2 class="partners__title title">Наши партнёры</h2>
+        <ul class="partners-list">
+
+          <li class="partners-list__item">
+            <a href="" class="partners-list__link">
+              <span class="visually-hidden">Партнёр Henkel</span>
+              <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  ./img/webp/logo-henkel@1x.webp 1x,
+                  ./img/webp/logo-henkel@2x.webp 2x
+                "
+              />
+
+              <!-- 1х: 116px; 2x: 232px -->
+                <img
+                  class="card__img"
+                  src="./img/logo-henkel@1x.png"
+                  srcset="./img/logo-henkel@2x.png 2x"
+                  alt="Логотип Henkel"
+                />
+              </picture>
+            </a>
+          </li>
+
+          <li class="partners-list__item">
+            <a href="" class="partners-list__link">
+              <span class="visually-hidden">Партнёр John Deere</span>
+              <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  ./img/webp/logo-john-deere@1x.webp 1x,
+                  ./img/webp/logo-john-deere@2x.webp 2x
+                "
+              />
+
+              <!-- 1х: 234px; 2x: 468px -->
+                <img
+                  class="card__img"
+                  src="./img/logo-john-deere@1x.png"
+                  srcset="./img/logo-john-deere@2x.png 2x"
+                  alt="Логотип John Deere"
+                />
+              </picture>
+            </a>
+          </li>
+
+          <li class="partners-list__item">
+            <a href="" class="partners-list__link">
+              <span class="visually-hidden">Партнёр McDonald`s</span>
+              <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  ./img/webp/logo-mcdonalds@1x.webp 1x,
+                  ./img/webp/logo-mcdonalds@2x.webp 2x
+                "
+              />
+
+              <!-- 1х: 85px; 2x: 170px -->
+                <img
+                  class="card__img"
+                  src="./img/logo-mcdonalds@1x.png"
+                  srcset="./img/logo-mcdonalds@2x.png 2x"
+                  alt="Логотип McDonald`s"
+                />
+              </picture>
+            </a>
+          </li>
+
+          <li class="partners-list__item">
+            <a href="" class="partners-list__link">
+              <span class="visually-hidden">Партнёр Ikea</span>
+              <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  ./img/webp/logo-ikea@1x.webp 1x,
+                  ./img/webp/logo-ikea@2x.webp 2x
+                "
+              />
+
+              <!-- 1х: 160px; 2x: 320px -->
+                <img
+                  class="card__img"
+                  src="./img/logo-ikea@1x.png"
+                  srcset="./img/logo-ikea@2x.png 2x"
+                  alt="Логотип Ikea"
+                />
+              </picture>
+            </a>
+          </li>
+
+          <li class="partners-list__item">
+            <a href="" class="partners-list__link">
+              <span class="visually-hidden">Партнёр Rebook</span>
+              <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  ./img/webp/logo-rebook@1x.webp 1x,
+                  ./img/webp/logo-rebook@2x.webp 2x
+                "
+              />
+
+              <!-- 1х: 234px; 2x: 468px -->
+                <img
+                  class="card__img"
+                  src="./img/logo-rebook@1x.png"
+                  srcset="./img/logo-rebook@2x.png 2x"
+                  alt="Логотип Rebook"
+                />
+              </picture>
+            </a>
+          </li>
+
+          <li class="partners-list__item">
+            <a href="" class="partners-list__link">
+              <span class="visually-hidden">Партнёр Nike</span>
+              <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  ./img/webp/logo-nike@1x.webp 1x,
+                  ./img/webp/logo-nike@2x.webp 2x
+                "
+              />
+
+              <!-- 1х: 122px; 2x: 244px -->
+                <img
+                  class="card__img"
+                  src="./img/logo-nike@1x.png"
+                  srcset="./img/logo-nike@2x.png 2x"
+                  alt="Логотип Nike"
+                />
+              </picture>
+            </a>
+          </li>
+
+          <li class="partners-list__item">
+            <a href="" class="partners-list__link">
+              <span class="visually-hidden">Партнёр Caterpillar</span>
+              <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  ./img/webp/logo-caterpillar@1x.webp 1x,
+                  ./img/webp/logo-caterpillar@2x.webp 2x
+                "
+              />
+
+              <!-- 1х: 234px; 2x: 468px -->
+                <img
+                  class="card__img"
+                  src="./img/logo-caterpillar@1x.png"
+                  srcset="./img/logo-caterpillar@2x.png 2x"
+                  alt="Логотип Caterpillar"
+                />
+              </picture>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__logo">
+          <a href="#" class="footer__logo-link">
+            <span class="visually-hidden">Логотип Qsoft</span>
+            <svg  class="footer__logo-svg" width="135" height="28" viewBox="0 0 135 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M29.1771 26.741H22.0945L21.0937 25.4322C19.708 25.9711 18.4763 26.356 17.3985 26.664C16.3207 26.8949 15.1659 27.0489 13.8572 27.0489C9.54607 27.0489 6.15875 25.9711 3.77224 23.8925C1.23175 21.737 0 18.4266 0 14.1925C0 9.88136 1.15477 6.57103 3.38731 4.33849C5.69685 2.10594 9.16114 0.951172 13.8572 0.951172C18.3993 0.951172 21.8636 2.18292 24.2501 4.56944C26.3287 6.64802 27.3295 9.34247 27.3295 12.5758C27.3295 14.9623 27.2525 16.733 27.0215 17.8108C26.7136 19.5044 25.9437 21.1211 24.866 22.5838L29.1771 26.741ZM21.0937 13.9615C21.0937 11.652 20.6318 9.80438 19.631 8.34168C18.3993 6.49405 16.3977 5.57024 13.7802 5.57024C11.3167 5.57024 9.3921 6.2631 8.16035 7.7258C6.9286 9.11152 6.31272 11.1901 6.31272 13.8846C6.31272 16.8869 7.00558 19.1195 8.46828 20.5052C9.77702 21.737 11.7016 22.3528 14.2421 22.3528C16.5516 22.3528 18.2453 21.66 19.4001 20.2743C20.5548 18.8116 21.0937 16.733 21.0937 13.9615Z" fill="#BBC4D6"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M55.8913 18.8116C55.8913 21.0441 55.1215 22.8917 53.6588 24.4314C52.1961 25.9711 50.3484 26.664 48.0389 26.664H30.3325V22.1219H45.0365C46.0373 22.1219 46.8841 21.8909 47.5 21.429C48.2699 20.8901 48.6548 20.1973 48.6548 19.2735C48.6548 17.1179 47.1151 16.0401 44.1127 16.0401H36.7222C34.5666 16.0401 32.719 15.3473 31.1023 14.0385C29.4857 12.7298 28.7158 11.0361 28.7158 8.95756C28.7158 6.72501 29.4857 4.87738 31.1023 3.49166C32.642 2.10595 34.7206 1.41309 37.3381 1.41309H54.3516V5.72421H39.2627C38.5698 5.72421 37.877 6.03215 37.2611 6.57104C36.4912 7.10993 36.1833 7.80279 36.1833 8.57263C36.1833 9.41946 36.4912 10.1893 37.1841 10.7282C37.877 11.3441 38.6468 11.575 39.5706 11.575H47.731C50.2715 11.575 52.273 12.2679 53.7358 13.5766C55.1985 14.8854 55.8913 16.656 55.8913 18.8116Z" fill="#BBC4D6"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M84.9913 13.9616C84.9913 18.8886 83.6056 22.3529 80.9111 24.5084C78.6786 26.2021 75.4452 27.0489 71.2881 27.0489C66.592 27.0489 63.1277 26.0481 60.8952 24.1235C58.4317 21.968 57.2 18.5037 57.2 13.7306C57.2 9.80442 58.2777 6.72504 60.5103 4.56948C62.8968 2.18296 66.4381 1.0282 71.2111 1.0282C76.446 1.0282 80.0643 2.18296 82.2199 4.41551C84.0675 6.41711 84.9913 9.57346 84.9913 13.9616ZM78.5246 13.8076C78.5246 11.3441 77.9088 9.34251 76.754 7.87981C75.4452 6.26314 73.4437 5.41631 70.9032 5.41631C68.3627 5.41631 66.4381 6.26314 65.1293 8.03378C64.0516 9.49648 63.5127 11.4211 63.5127 13.7306C63.5127 16.4251 63.9746 18.4267 64.8214 19.7354C66.0532 21.506 68.2087 22.4299 71.519 22.4299C74.2905 22.4299 76.2151 21.583 77.2929 19.8124C78.1397 18.5806 78.5246 16.5021 78.5246 13.8076Z" fill="#BBC4D6"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M110.319 16.1171H92.9201V26.587H86.6843V11.1131C86.6843 10.1893 86.8383 9.11153 87.2232 7.95676C87.9161 5.87818 89.2248 4.33849 91.1494 3.26071C93.382 2.02896 97.0772 1.41309 102.158 1.41309C113.013 1.41309 123.868 1.41309 134.723 1.41309V5.64723H125.33V26.587H119.48V5.64723C113.475 5.64723 107.778 5.57024 101.773 5.57024C99.4637 5.57024 97.8471 5.72421 96.9233 5.95517C95.3066 6.34009 94.2288 7.2639 93.5359 8.57263C92.997 9.57343 92.7661 10.6512 92.7661 11.883H110.319V16.1171Z" fill="#BBC4D6"/>
+            </svg>
+          </a>
+        </div>
+        <ul class="social-links">
+          <li class="social-links__item">
+            <a href="https://www.youtube.com/channel/UClTwIExf4E7Rnv4Ni5DlhYw/" class="social-lniks__link" target="_blank" rel="noopener noreferrer">
+              <span class="visually-hidden">Ютуб</span>
+              <svg class="social-links__icon" width="31" height="30">
+                <use xlink:href="#icon-youtube"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-links__item">
+            <a href="https://www.instagram.com/qsoft.ru/" class="social-links__link" target="_blank" rel="noopener noreferrer">
+              <span class="visually-hidden">Инстаграм</span>
+              <svg class="social-links__icon" width="31" height="30">
+                <use xlink:href="#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <ul class="footer-nav">
+          <li class="footer-nav__item">
+            <a href="#" class="footer-nav__link">Правила</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="#" class="footer-nav__link">Документы</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="#" class="footer-nav__link">Политика конфиденциальности</a>
+          </li>
+        </ul>
+        <a class="btn btn--call" href="#">Заказать звонок</a>
+      </div>
+    </footer>
+
+    <script src="./js/mobile-menu.js"></script>
+    <script src="./js/imask-settings.js"></script>
+  </body>
+</html>

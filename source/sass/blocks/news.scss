@@ -1,0 +1,28 @@
+.news {
+    background-color: $color-bg-secondery;
+}
+
+.news__inner {
+    margin: 0 auto;
+    padding: 38px 135px;
+    padding-bottom: 50px;
+
+    max-width: $desktop-max-width;
+
+    font-family: $font-main;
+    font-size: 14px;
+    line-height: 160%;
+    font-weight: 400;
+}
+
+@media (max-width: $tablet-max-width) {
+    .news__inner {
+        padding: 70px 20px;
+    }
+}
+
+@media (max-width: $mobile-max-width) {
+    .news__inner {
+        min-width: $mobile-min-width;
+    }
+}

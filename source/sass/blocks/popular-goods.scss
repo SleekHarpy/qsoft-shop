@@ -1,0 +1,26 @@
+.popular-goods {
+    margin: 0 auto;
+    padding: 0 135px;
+    padding-top: 77px;
+    padding-bottom: 90px;
+
+    max-width: $desktop-max-width;
+
+    font-family: $font-main;
+    font-size: 14px;
+    line-height: 160%;
+    font-weight: 400;
+}
+
+@media (max-width: $tablet-max-width) {
+    .popular-goods {
+        padding: 0 20px;
+        padding-bottom: 70px;
+    }
+}
+
+@media (max-width: $mobile-max-width) {
+    .popular-goods {
+        min-width: $mobile-min-width;
+    }
+}

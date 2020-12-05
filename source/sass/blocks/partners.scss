@@ -1,0 +1,24 @@
+.partners {
+    margin: 0 auto;
+    padding: 78px 135px;
+    padding-bottom: 90px;
+
+    max-width: $desktop-max-width;
+
+    font-family: $font-main;
+    font-size: 14px;
+    line-height: 160%;
+    font-weight: 400;
+}
+
+@media (max-width: $tablet-max-width) {
+    .partners {
+        padding: 70px 20px;
+    }
+}
+
+@media (max-width: $mobile-max-width) {
+    .partners {
+        min-width: $mobile-min-width;
+    }
+}
